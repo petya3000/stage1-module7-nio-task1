@@ -53,7 +53,12 @@ public class FileReader {
             e.printStackTrace();
             return null;
         } finally {
-            buffer.clear();
+            try {
+                buffer.clear();
+            }
+            catch (NullPointerException ex){
+                ex.printStackTrace();
+            }
         }
     }
 }
