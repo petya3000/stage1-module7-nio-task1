@@ -52,13 +52,6 @@ public class FileReader {
         } catch (IOException e) {
             e.printStackTrace();
             return null;
-        } finally {
-            try {
-                buffer.clear();
-            }
-            catch (NullPointerException ex){
-                ex.printStackTrace();
-            }
         }
     }
 }
